@@ -15,6 +15,23 @@
     */
 
     // Entrada
+    const salario = Number(prompt(`Informe seu salário mensal`.trim()))
+    if (salario<=2000) {
+        alert(`Seu salário com o reajuste de 15% será de ${salario*1.15}`)
+    }
+    else if (salario>2000) {
+        alert(`Seu salário com o reajuste de 10% será de ${salario*1.1}`)
+    }
+    else if (salario>4000) {
+        alert(`Seu salário com o reajuste de 7.5% será de ${salario*7.5+salario}`)
+    }
+    else if (salario>7000) {
+        alert(`Seu salário com o reajuste de 5% será de ${salario*1.05}`)
+    }
+    else {
+        alert(`Inválido, tente novamente.`)
+    }
+    
     
     // Processamento
 
