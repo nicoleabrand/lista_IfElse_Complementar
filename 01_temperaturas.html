@@ -9,6 +9,12 @@
     - Contudo, caso esteja acima de 500 graus Celsius, deverá apresentar a mensagem "Está muito alta!".
     */
     const temp = Number(prompt(`Informe uma temperatura em graus celsius`))
+    if (temp<100) {
+        alert(`Está muito baixa!`)
+    }
+    else if (temp>100 && temp<=200) {
+        alert(`Está baixa!`)
+    }
     // Entrada
     
     // Processamento
