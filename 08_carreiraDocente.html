@@ -19,7 +19,23 @@
     */
 
     // Entrada
-    
+    const anos = Number(prompt(`Informe quantos anos de carreira possui`).trim());
+    const projetosp = Number(prompt(`Informe quantos projetos de pesquisa já coordenou`).trim());
+    const projetose = Number(prompt(`Informe quantos projetos de extensão já orientou`).trim());
+    const tcc = Number(prompt(`Informe quantos projetos de TCC já orientou`).trim());
+    let pontos = (anos*2.5)+(projetosp*5)+(projetose*5)+(tcc*3);
+    if (pontos<=30) {
+        alert(`Convidado`)
+    }
+    else if (pontos<=50) {
+        alert(`Agregado`)
+    }
+    else if (pontos>50) {
+        alert(`Titular`)
+    }
+    else {
+        alert(`Inválido, tente novamente.`)
+    }
     // Processamento
 
     // Saída

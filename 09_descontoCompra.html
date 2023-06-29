@@ -12,7 +12,20 @@
     */
 
     // Entrada
-    
+    const valor = Number(prompt(`Informe o valor do computador`).trim())
+    const pagamento = prompt(`Informe a forma de pagamento do cliente. Use B(boleto) | D(dinheiro) | P(pix))`).trim().toLowerCase()
+    if (pagamento=="b") {
+        alert(`O valor total será de R$${valor*1.03}`)
+    }
+    else if (pagamento=="d") {
+        alert(`O valor total será de R$${valor*1.05}`)
+    }
+    else if (pagamento=="p") {
+        alert(`O valor total será de R$${valor*1.1}`)
+    }
+    else {
+        alert(`Inválido, tente novamente.`)
+    }
     // Processamento
 
     // Saída

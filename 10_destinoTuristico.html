@@ -12,7 +12,22 @@
     */
 
     // Entrada
-    
+    const valorspa = Number(prompt(`Informe o valor do transporte aéreo para SP`).trim())
+    const valorrja = Number(prompt(`Informe o valor do transporte aéreo para RJ`).trim())
+    const valorsph = Number(prompt(`Informe o valor do hotel para SP`).trim())
+    const valorrjh = Number(prompt(`Informe o valor do hotel para RJ`).trim())
+    if (pagamento=="b") {
+        alert(`O valor total será de R$${valor*1.03}`)
+    }
+    else if (pagamento=="d") {
+        alert(`O valor total será de R$${valor*1.05}`)
+    }
+    else if (pagamento=="p") {
+        alert(`O valor total será de R$${valor*1.1}`)
+    }
+    else {
+        alert(`Inválido, tente novamente.`)
+    }
     // Processamento
 
     // Saída
