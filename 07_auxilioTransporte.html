@@ -12,7 +12,23 @@
     */
 
     // Entrada
-    
+    const salario = Number(prompt(`Informe qual seu salario mensal`).trim());
+    const auxilio = prompt(`Deseja receber auxílio transporte? (S-Sim | N-Não)`).trim().toLowerCase();
+    const veiculo = prompt(`Utiliza transporte próprio? Use S(sim) e N(não)`.trim().toLowerCase());
+    let mensagem = "";
+    if (auxilio == "n") {
+        mensagem = `Seu saláro final será de R$${salario}`
+    }
+    else if (veiculo == "s" && auxilio == "s") {
+        mensagem = `O desconto será de R$ ${(salario * 0.06).toFixed(2)} e o salário final será de R$${salario - (salario * 0.06) + 200}`
+    }
+    else if (veiculo == "n" && auxilio == "s") {
+        mensagem = `O desconto será de R$ ${(salario * 0.06).toFixed(2)} Seu saláro final será de R$${salario - (salario * 0.06) + 150}`
+    }
+    else {
+        mensagem = `Inválido, tente novamente.`
+    }
+    alert(mensagem);
     // Processamento
 
     // Saída

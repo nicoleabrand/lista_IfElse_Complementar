@@ -15,7 +15,23 @@
     */
 
     // Entrada
-    
+    const viagens = Number(prompt(`Informe quantas viagens foram realizadas por dia`).trim())
+    const cargo = prompt(`Informe qual cargo ocupa`).trim().toLowerCase()
+    if (cargo=="motorista" && viagens<=10) {
+        alert(`Seu cargo é ${cargo} e o valor total a ser recebido pelas viagens será de R$${(viagens*100)*1.2}`)
+    }
+    else if (cargo=="motorista" && viagens>10) {
+        alert(`Seu cargo é ${cargo} e o valor total a ser recebido pelas viagens será de R$${(viagens*100)*1.35}`)
+    }
+    else if (cargo=="cobrador" && viagens<=10) {
+        alert(`Seu cargo é ${cargo} e o valor total a ser recebido pelas viagens será de R$${viagens*100}`)
+    }
+    else if (cargo=="cobrador" && viagens>10) {
+        alert(`Seu cargo é ${cargo} e o valor total a ser recebido pelas viagens será de R$${(viagens*100)*1.1}`)
+    }
+    else {
+        alert(`Inválido, tente novamente.`)
+    }
     // Processamento
 
     // Saída
